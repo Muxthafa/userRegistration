@@ -25,7 +25,7 @@ public class UserRegistration
 	
 	/**
 	 * @method checkLastname checks if last name matches pattern
-	 * @param firstname
+	 * @param lastname
 	 * @return boolean
 	 */
 	public boolean checkLastname(String lastname) {
@@ -38,13 +38,27 @@ public class UserRegistration
 	}
 	
 	/**
-	 * @method checkLastname checks if last name matches pattern
+	 * @method email checks if email matches pattern
 	 * @param email
 	 * @return boolean
 	 */
 	public boolean checkEmail(String email) {
 		String email_pattern="^[a-zA-Z0-9-_]+([.]?[a-zA-Z0-9-_]+)@[a-zA-Z0-9-_]+[.][a-zA-Z]{1,4}([.]?[a-zA-Z-_]+)";
 		if(Pattern.matches(email_pattern, email)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	/**
+	 * @method checkPhone checks if phone number matches pattern
+	 * @param number
+	 * @return boolean
+	 */
+	public boolean checkPhone(String number) {
+		String number_pattern="^([+][0-9]{2,3})[ ][0-9]{10}";
+		if(Pattern.matches(number_pattern, number)) {
 			return true;
 		}else {
 			return false;
