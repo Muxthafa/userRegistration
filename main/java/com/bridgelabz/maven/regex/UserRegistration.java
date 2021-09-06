@@ -73,7 +73,7 @@ public class UserRegistration
 	public boolean checkPassword(String password) {
 		String password_pattern;
 		if(password.length()>7) {
-			password_pattern="^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
+			password_pattern="^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
 			return Pattern.matches(password_pattern, password); 
 		}else {
 			return false;
