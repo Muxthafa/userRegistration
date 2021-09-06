@@ -66,14 +66,14 @@ public class UserRegistration
 	}
 	
 	/**
-	 * @method checkPassword checks if password length is greater than 8
+	 * @method checkPassword validates password
 	 * @param password
 	 * @return boolean
 	 */
 	public boolean checkPassword(String password) {
 		String password_pattern;
 		if(password.length()>7) {
-			password_pattern=".*[A-Z].*";
+			password_pattern="^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
 			return Pattern.matches(password_pattern, password); 
 		}else {
 			return false;
