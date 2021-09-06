@@ -71,8 +71,10 @@ public class UserRegistration
 	 * @return boolean
 	 */
 	public boolean checkPassword(String password) {
+		String password_pattern;
 		if(password.length()>7) {
-			return true;
+			password_pattern=".*[A-Z].*";
+			return Pattern.matches(password_pattern, password); 
 		}else {
 			return false;
 		}
