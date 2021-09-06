@@ -15,9 +15,15 @@ public class UserRegistrationTest
     @Test
     public void patternTest()
     {
-    	UserRegistration firstname = new UserRegistration();
+    	UserRegistration registration = new UserRegistration();
     	Scanner sc =new Scanner(System.in);
-    	String input=sc.nextLine();
-        assertEquals(true,firstname.checkFirstname(input));
+    	System.out.println("Enter First Name:");
+    	String input1=sc.nextLine();
+    	
+    	System.out.println("Enter Last Name:");
+    	String input2=sc.nextLine();
+    	
+    	assertEquals(true,registration.checkFirstname(input1));
+        assertEquals(true,registration.checkLastname(input2));
     }
 }
