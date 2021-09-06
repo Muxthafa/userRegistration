@@ -36,4 +36,18 @@ public class UserRegistration
 			return false;
 		}
 	}
+	
+	/**
+	 * @method checkLastname checks if last name matches pattern
+	 * @param email
+	 * @return boolean
+	 */
+	public boolean checkEmail(String email) {
+		String email_pattern="^[a-zA-Z0-9-_]+([.]?[a-zA-Z0-9-_]+)@[a-zA-Z0-9-_]+[.][a-zA-Z]{1,4}([.]?[a-zA-Z-_]+)";
+		if(Pattern.matches(email_pattern, email)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

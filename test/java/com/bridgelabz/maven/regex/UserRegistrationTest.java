@@ -17,13 +17,16 @@ public class UserRegistrationTest
     {
     	UserRegistration registration = new UserRegistration();
     	Scanner sc =new Scanner(System.in);
-    	System.out.println("Enter First Name:");
-    	String input1=sc.nextLine();
+//    	System.out.println("Enter First Name:");
+//    	String input1=sc.nextLine();
+//    	
+//    	System.out.println("Enter Last Name:");
+//    	String input2=sc.nextLine();
     	
-    	System.out.println("Enter Last Name:");
-    	String input2=sc.nextLine();
-    	
-    	assertEquals(true,registration.checkFirstname(input1));
-        assertEquals(true,registration.checkLastname(input2));
+    	System.out.println("Enter email:");
+    	String input3=sc.nextLine();
+//    	assertEquals(true,registration.checkFirstname(input1));
+//        assertEquals(true,registration.checkLastname(input2));
+        assertEquals(true,registration.checkEmail(input3));
     }
 }
