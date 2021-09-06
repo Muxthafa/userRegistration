@@ -28,9 +28,14 @@ public class UserRegistrationTest
     	
     	System.out.println("Enter phone number:");
     	String phone_number=sc.nextLine();
+    	
+    	System.out.println("Enter password:");
+    	String password=sc.nextLine();
+    	
     	assertEquals(true,registration.checkFirstname(firstname));
         assertEquals(true,registration.checkLastname(lastname));
         assertEquals(true,registration.checkEmail(email));
         assertEquals(true,registration.checkPhone(phone_number));
+        assertEquals(true,registration.checkPassword(password));
     }
 }

@@ -64,4 +64,17 @@ public class UserRegistration
 			return false;
 		}
 	}
+	
+	/**
+	 * @method checkPassword checks if password length is greater than 8
+	 * @param password
+	 * @return boolean
+	 */
+	public boolean checkPassword(String password) {
+		if(password.length()>7) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
